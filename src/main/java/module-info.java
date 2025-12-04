@@ -12,4 +12,6 @@ module com.example.intra_city_bus_terminal {
     opens com.example.intra_city_bus_terminal.Ticketing_Staff to javafx.fxml, javafx.base;
 
     exports com.example.intra_city_bus_terminal;
+    exports com.example.intra_city_bus_terminal.Station_Manager;
+    exports com.example.intra_city_bus_terminal.Security_Officer;
 }
