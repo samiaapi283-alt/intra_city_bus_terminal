@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.intra_city_bus_terminal.Security_Officer.Report_Security_Incident">
+   <children>
+      <Label alignment="CENTER" layoutX="93.0" layoutY="5.0" prefHeight="30.0" prefWidth="414.0" text="LOG SECURITY INCIDENT ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="50.0" text="Incident Type " />
+      <Label layoutX="53.0" layoutY="153.0" text="Description" />
+      <Label layoutX="53.0" layoutY="117.0" text="Severity" />
+      <Label layoutX="53.0" layoutY="84.0" text="Location " />
+      <Label layoutX="328.0" layoutY="50.0" text="Date" />
+      <Label layoutX="328.0" layoutY="98.0" text="Officer ID" />
+      <TableView fx:id="IncidentTableView" layoutX="2.0" layoutY="229.0" prefHeight="169.0" prefWidth="594.0">
+        <columns>
+          <TableColumn fx:id="IncidentTypeTC" prefWidth="151.0" text="Incident Type " />
+          <TableColumn fx:id="LocationTC" prefWidth="133.0" text="Location" />
+            <TableColumn fx:id="SeverityTC" prefWidth="86.0" text="Severity" />
+            <TableColumn fx:id="DateTC" minWidth="0.0" prefWidth="103.0" text="Date" />
+            <TableColumn fx:id="OfficerIDTC" minWidth="0.0" prefWidth="120.0" text="Officer ID " />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="IncidentTypeComboBox" layoutX="150.0" layoutY="46.0" prefWidth="150.0" />
+      <TextField fx:id="LocationTextField" layoutX="150.0" layoutY="79.0" prefHeight="26.0" prefWidth="150.0" />
+      <ComboBox fx:id="SeverityComboBox" layoutX="150.0" layoutY="113.0" prefWidth="150.0" />
+      <TextField fx:id="DescriptionTextField" layoutX="150.0" layoutY="149.0" prefHeight="69.0" prefWidth="239.0" />
+      <DatePicker fx:id="DatePicker" layoutX="399.0" layoutY="46.0" prefHeight="26.0" prefWidth="159.0" />
+      <TextField fx:id="OfficerIDTextField" layoutX="399.0" layoutY="94.0" />
+      <Button layoutX="471.0" layoutY="140.0" mnemonicParsing="false" onAction="#LogIncidentOnAction" text="Log Incident " />
+   </children>
+</fx:root>
