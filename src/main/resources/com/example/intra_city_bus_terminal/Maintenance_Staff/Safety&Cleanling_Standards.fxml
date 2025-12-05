@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.intra_city_bus_terminal.Maintenance_Staff.SafetyCleanlingStandards">
+   <children>
+      <Label layoutX="32.0" layoutY="32.0" text="Task ID :" />
+      <Label layoutX="32.0" layoutY="65.0" text="Task Name :" />
+      <Label layoutX="40.0" layoutY="104.0" text="Area :" />
+      <Label layoutX="40.0" layoutY="141.0" text="Status :" />
+      <TextField fx:id="TaskIDTF" layoutX="111.0" layoutY="28.0" />
+      <TextField fx:id="TaskNameTF" layoutX="111.0" layoutY="61.0" />
+      <TextField fx:id="AreaTF" layoutX="111.0" layoutY="100.0" />
+      <ComboBox fx:id="StatusCB" layoutX="111.0" layoutY="137.0" prefWidth="150.0" />
+      <Button layoutX="97.0" layoutY="260.0" mnemonicParsing="false" onAction="#MarkCompletedOA" text="Mark Completed" />
+      <TableView layoutX="284.0" layoutY="186.0" prefHeight="200.0" prefWidth="301.0">
+        <columns>
+          <TableColumn fx:id="TaskIDTC" prefWidth="75.0" text="Task ID" />
+          <TableColumn fx:id="TaskNameTC" prefWidth="75.0" text="Task Name" />
+            <TableColumn fx:id="AreaTC" prefWidth="75.0" text="Area " />
+            <TableColumn fx:id="StatusTC" prefWidth="75.0" text="Status " />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

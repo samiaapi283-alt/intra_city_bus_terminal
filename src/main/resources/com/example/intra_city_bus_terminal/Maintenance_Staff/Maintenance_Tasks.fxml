@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.intra_city_bus_terminal.Maintenance_Staff.MaintenanceTasks"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.intra_city_bus_terminal.Maintenance_Staff.MaintenanceTasks">
+   <children>
+      <TableView layoutX="263.0" layoutY="200.0" prefHeight="200.0" prefWidth="302.0">
+        <columns>
+          <TableColumn fx:id="TaskIDTC" prefWidth="75.0" text="Task ID " />
+          <TableColumn fx:id="TaskNameTC" prefWidth="75.0" text="Task Name " />
+            <TableColumn fx:id="AreaTC" prefWidth="75.0" text="Area " />
+            <TableColumn fx:id="StatusTC" prefWidth="75.0" text="Status " />
+        </columns>
+      </TableView>
+      <TextArea fx:id="DescriptionTA" layoutX="392.0" prefHeight="138.0" prefWidth="200.0" promptText="Description" />
+      <Button layoutX="69.0" layoutY="279.0" mnemonicParsing="false" onAction="#StartTaskOA" text="Start Task" />
+      <Label layoutX="42.0" layoutY="42.0" text="Task ID :" />
+      <Label layoutX="42.0" layoutY="75.0" text="Task Name :" />
+      <Label layoutX="50.0" layoutY="114.0" text="Area :" />
+      <Label layoutX="50.0" layoutY="151.0" text="Status :" />
+      <TextField fx:id="TaskIDTF" layoutX="121.0" layoutY="38.0" />
+      <TextField fx:id="TaskNameTF" layoutX="121.0" layoutY="71.0" />
+      <TextField fx:id="AreaTF" layoutX="121.0" layoutY="110.0" />
+      <ComboBox fx:id="StatusCB" layoutX="121.0" layoutY="147.0" prefWidth="150.0" />
+   </children>
 </AnchorPane>

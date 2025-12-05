@@ -1,23 +1,30 @@
 package com.example.intra_city_bus_terminal.Passenger;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableColumn;
+
+import java.time.LocalDate;
+
 public class ViewBusSchedule
 {
     @javafx.fxml.FXML
-    private TableColumn FromTC;
+    private TableColumn<ViewBusSchedule,String> FromTC;
     @javafx.fxml.FXML
-    private ComboBox FromCB;
+    private ComboBox<String>FromCB;
     @javafx.fxml.FXML
     private DatePicker dateDP;
     @javafx.fxml.FXML
-    private TableColumn dateTC;
+    private TableColumn<ViewBusSchedule, LocalDate> dateTC;
     @javafx.fxml.FXML
-    private TableColumn ToTC;
+    private TableColumn<ViewBusSchedule,String> ToTC;
     @javafx.fxml.FXML
-    private ComboBox ToCB;
+    private ComboBox<String> ToCB;
     @javafx.fxml.FXML
-    private ComboBox routeCB;
+    private ComboBox<String> routeCB;
     @javafx.fxml.FXML
-    private TableColumn routeTC;
+    private TableColumn<ViewBusSchedule,String> routeTC;
 
     @javafx.fxml.FXML
     public void initialize() {

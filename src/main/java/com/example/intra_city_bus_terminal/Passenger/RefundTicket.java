@@ -1,5 +1,13 @@
 package com.example.intra_city_bus_terminal.Passenger;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TextField;
+
+import java.time.LocalDate;
+
 public class RefundTicket
 {
     @javafx.fxml.FXML
@@ -7,21 +15,21 @@ public class RefundTicket
     @javafx.fxml.FXML
     private TextField RouteTF;
     @javafx.fxml.FXML
-    private TableColumn StatusTC;
+    private TableColumn <RefundTicket,String> StatusTC;
     @javafx.fxml.FXML
-    private ComboBox StatusCB;
+    private ComboBox<String> StatusCB;
     @javafx.fxml.FXML
-    private TableColumn SeatnoTC;
+    private TableColumn<RefundTicket,String> SeatnoTC;
     @javafx.fxml.FXML
-    private TableColumn RouteTC;
+    private TableColumn<RefundTicket,String> RouteTC;
     @javafx.fxml.FXML
-    private TableColumn DateTC;
+    private TableColumn<RefundTicket, LocalDate> DateTC;
     @javafx.fxml.FXML
     private TextField SeatnoTF;
     @javafx.fxml.FXML
     private DatePicker DateDP;
     @javafx.fxml.FXML
-    private TableColumn TicketIDTC;
+    private TableColumn <RefundTicket,Integer>TicketIDTC;
 
     @javafx.fxml.FXML
     public void initialize() {

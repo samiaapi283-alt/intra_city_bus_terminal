@@ -2,26 +2,24 @@ package com.example.intra_city_bus_terminal.Maintenance_Staff;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class MaintenanceTasks
+public class SafetyCleanlingStandards
 {
     @javafx.fxml.FXML
     private TextField TaskIDTF;
     @javafx.fxml.FXML
-    private TableColumn<MaintenanceTasks,String> TaskNameTC;
+    private TableColumn <SafetyCleanlingStandards, String> TaskNameTC;
     @javafx.fxml.FXML
-    private TableColumn <MaintenanceTasks,String>  StatusTC;
+    private ComboBox <String>StatusCB;
     @javafx.fxml.FXML
-    private ComboBox<String>  StatusCB;
+    private TableColumn <SafetyCleanlingStandards, String> StatusTC;
     @javafx.fxml.FXML
-    private TextArea DescriptionTA;
+    private TableColumn <SafetyCleanlingStandards, String> AreaTC;
     @javafx.fxml.FXML
-    private TableColumn <MaintenanceTasks,String>  AreaTC;
-    @javafx.fxml.FXML
-    private TableColumn <MaintenanceTasks,String>  TaskIDTC;
+    private TableColumn <SafetyCleanlingStandards, String> TaskIDTC;
     @javafx.fxml.FXML
     private TextField TaskNameTF;
     @javafx.fxml.FXML
@@ -32,6 +30,6 @@ public class MaintenanceTasks
     }
 
     @javafx.fxml.FXML
-    public void StartTaskOA(ActionEvent actionEvent) {
+    public void MarkCompletedOA(ActionEvent actionEvent) {
     }
 }
