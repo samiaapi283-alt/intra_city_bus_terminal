@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.intra_city_bus_terminal.Ticketing_Staff.Seat_AvailabilityController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="405.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.intra_city_bus_terminal.Ticketing_Staff.Seat_AvailabilityController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Bus &amp; Route Filter" />
+      <Label layoutX="14.0" layoutY="38.0" text="Bus Number:" />
+      <Label layoutX="12.0" layoutY="69.0" prefHeight="18.0" prefWidth="69.0" text="Travel Date: " />
+      <ComboBox fx:id="busListComboBox" layoutX="89.0" layoutY="34.0" prefHeight="26.0" prefWidth="82.0" promptText="Bus List" />
+      <DatePicker fx:id="TravelDateDP" layoutX="89.0" layoutY="74.0" prefHeight="26.0" prefWidth="82.0" />
+      <Button layoutX="97.0" layoutY="116.0" mnemonicParsing="false" onAction="#loadSeatsOnClick" text="Load Seats" />
+      <TableView layoutX="10.0" layoutY="156.0" prefHeight="112.0" prefWidth="169.0">
+        <columns>
+          <TableColumn fx:id="seatNoColumn" prefWidth="76.800048828125" text="Seat No" />
+          <TableColumn fx:id="statusColumn" prefWidth="91.1999755859375" text="Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="240.0" layoutY="14.0" text="Seat Update Panel" />
+      <Label layoutX="240.0" layoutY="38.0" text="Selected Seat No:" />
+      <Label layoutX="240.0" layoutY="69.0" text="Update Status: " />
+      <TextField fx:id="SeatNoTextField" editable="false" layoutX="338.0" layoutY="34.0" />
+      <ComboBox fx:id="statusComboBox" layoutX="337.0" layoutY="65.0" prefWidth="150.0" />
+      <Button layoutX="405.0" layoutY="103.0" mnemonicParsing="false" onAction="#updateSeatOnClick" text="Update Seat" />
+      <Button layoutX="397.0" layoutY="268.0" mnemonicParsing="false" onAction="#saveChangesOnClick" text="Save Changes" />
+      <Label fx:id="outputLabel" layoutX="8.0" layoutY="304.0" prefHeight="75.0" prefWidth="482.0" />
+   </children>
 </AnchorPane>

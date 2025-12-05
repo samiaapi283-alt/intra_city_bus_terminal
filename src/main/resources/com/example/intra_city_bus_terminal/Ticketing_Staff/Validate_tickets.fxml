@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.intra_city_bus_terminal.Ticketing_Staff.Validate_ticketsController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="361.0" prefWidth="331.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.intra_city_bus_terminal.Ticketing_Staff.Validate_ticketsController">
+   <children>
+      <Label layoutX="5.0" layoutY="14.0" prefHeight="18.0" prefWidth="114.0" text="Ticket Input Section" />
+      <Label layoutX="5.0" layoutY="39.0" prefHeight="18.0" prefWidth="91.0" text="Ticket Number:" />
+      <TextField fx:id="ticketNumberTextField" layoutX="101.0" layoutY="35.0" prefHeight="26.0" prefWidth="196.0" />
+      <Button layoutX="216.0" layoutY="69.0" mnemonicParsing="false" onAction="#verifyTicketOnClick" text="Verify Ticket" />
+      <Label layoutX="8.0" layoutY="82.0" prefHeight="26.0" prefWidth="91.0" text="Ticket Details" />
+      <Label layoutX="8.0" layoutY="116.0" text="Passenger Name:" />
+      <Label layoutX="8.0" layoutY="146.0" text="Bus Number:" />
+      <Label layoutX="8.0" layoutY="178.0" text="Travel Date:" />
+      <Label layoutX="8.0" layoutY="212.0" text="Validation Status:" />
+      <TextField fx:id="passengerNameTextField" editable="false" layoutX="107.0" layoutY="112.0" prefHeight="26.0" prefWidth="190.0" />
+      <TextField fx:id="validationStatusTextField" editable="false" layoutX="107.0" layoutY="208.0" prefHeight="26.0" prefWidth="190.0" />
+      <TextField fx:id="busNumberTextField" editable="false" layoutX="107.0" layoutY="142.0" prefHeight="26.0" prefWidth="190.0" />
+      <TextField fx:id="travelDateTextField" editable="false" layoutX="107.0" layoutY="174.0" prefHeight="26.0" prefWidth="190.0" />
+      <Button layoutX="202.0" layoutY="245.0" mnemonicParsing="false" onAction="#logValidationOnClick" prefHeight="26.0" prefWidth="98.0" text="Log Validation" />
+      <Label fx:id="outputLabel" layoutX="5.0" layoutY="280.0" prefHeight="59.0" prefWidth="298.0" />
+   </children>
 </AnchorPane>

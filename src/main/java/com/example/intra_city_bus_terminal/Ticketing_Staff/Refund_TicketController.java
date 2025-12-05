@@ -1,33 +1,33 @@
 package com.example.intra_city_bus_terminal.Ticketing_Staff;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+
 public class Refund_TicketController
 {
+
     @javafx.fxml.FXML
-    private TextField TicketIDTF;
+    private Label outputLabel;
     @javafx.fxml.FXML
-    private TextField RouteTF;
+    private TextArea refundEligibilityTextArea;
     @javafx.fxml.FXML
-    private TableColumn StatusTC;
-    @javafx.fxml.FXML
-    private ComboBox StatusCB;
-    @javafx.fxml.FXML
-    private TableColumn SeatnoTC;
-    @javafx.fxml.FXML
-    private TableColumn RouteTC;
-    @javafx.fxml.FXML
-    private TableColumn DateTC;
-    @javafx.fxml.FXML
-    private TextField SeatnoTF;
-    @javafx.fxml.FXML
-    private DatePicker DateDP;
-    @javafx.fxml.FXML
-    private TableColumn TicketIDTC;
+    private TextField ticketNumberTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void ConfirmRefundOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void refundOnClick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void searchTicketOnClick(ActionEvent actionEvent) {
     }
 }

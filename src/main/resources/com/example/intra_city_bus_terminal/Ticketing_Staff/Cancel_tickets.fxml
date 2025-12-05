@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.intra_city_bus_terminal.Ticketing_Staff.Cancel_ticketsController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="370.0" prefWidth="287.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.intra_city_bus_terminal.Ticketing_Staff.Cancel_ticketsController">
+   <children>
+      <Label layoutX="6.0" layoutY="6.0" prefHeight="34.0" prefWidth="112.0" text="Ticket Search Section" />
+      <Label layoutX="4.0" layoutY="40.0" text="Ticket Number:" />
+      <TextField fx:id="ticketNumberTextField" layoutX="101.0" layoutY="35.0" prefHeight="26.0" prefWidth="150.0" />
+      <Button layoutX="171.0" layoutY="68.0" mnemonicParsing="false" onAction="#verifyTicketOnClick" text="Verify Ticket" />
+      <Label layoutX="6.0" layoutY="94.0" prefHeight="26.0" prefWidth="122.0" text="Ticket Details Section " />
+      <Label layoutX="8.0" layoutY="154.0" text="Seat Number:" />
+      <Label layoutX="8.0" layoutY="180.0" text="Travel Date:" />
+      <Label layoutX="8.0" layoutY="128.0" text="Passenger Name:" />
+      <TextField fx:id="passengerNameTextField" editable="false" layoutX="102.0" layoutY="124.0" />
+      <TextField fx:id="seatNumberTextField" editable="false" layoutX="102.0" layoutY="150.0" />
+      <TextField fx:id="travelDateTextField" editable="false" layoutX="102.0" layoutY="176.0" />
+      <Button layoutX="166.0" layoutY="213.0" mnemonicParsing="false" onAction="#cancelTicketOnClick" text="Cancel Ticket" />
+      <Label fx:id="outputlabel" layoutX="9.0" layoutY="264.0" prefHeight="66.0" prefWidth="242.0" />
+   </children>
 </AnchorPane>

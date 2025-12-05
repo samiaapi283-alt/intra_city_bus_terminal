@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="426.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.intra_city_bus_terminal.Ticketing_Staff.Refund_TicketController" />
+
+<AnchorPane prefHeight="357.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.intra_city_bus_terminal.Ticketing_Staff.Refund_TicketController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Ticket Search Section" />
+      <Label layoutX="14.0" layoutY="39.0" text="Ticket Number:" />
+      <TextField fx:id="ticketNumberTextField" layoutX="102.0" layoutY="35.0" />
+      <Button layoutX="166.0" layoutY="74.0" mnemonicParsing="false" onAction="#searchTicketOnClick" text="Search Ticket" />
+      <Label layoutX="14.0" layoutY="105.0" prefHeight="26.0" prefWidth="130.0" text=" Refund Eligibility Result:" />
+      <TextArea fx:id="refundEligibilityTextArea" editable="false" layoutX="14.0" layoutY="131.0" prefHeight="95.0" prefWidth="242.0" text="Eligibility Status:" />
+      <Button layoutX="160.0" layoutY="236.0" mnemonicParsing="false" onAction="#refundOnClick" text="Process Refund" />
+      <Label fx:id="outputLabel" layoutX="17.0" layoutY="271.0" prefHeight="64.0" prefWidth="242.0" />
+   </children>
+</AnchorPane>
