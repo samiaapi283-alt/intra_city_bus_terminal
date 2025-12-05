@@ -1,15 +1,18 @@
 package com.example.intra_city_bus_terminal.Security_Officer;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+
 public class View_SecurityStaff_List
 {
     @javafx.fxml.FXML
-    private TableColumn StaffIDTC;
+    private TableColumn <View_SecurityStaff_List, String> StaffIDTC;
     @javafx.fxml.FXML
     private MenuBar MenuBar;
     @javafx.fxml.FXML
-    private TableView Tableview;
+    private TableView <View_SecurityStaff_List> Tableview;
     @javafx.fxml.FXML
-    private TableColumn DateTC;
+    private TableColumn <View_SecurityStaff_List, DatePicker> DateTC;
     @javafx.fxml.FXML
     private DatePicker DatePicker;
     @javafx.fxml.FXML
@@ -17,7 +20,7 @@ public class View_SecurityStaff_List
     @javafx.fxml.FXML
     private TextField StaffNameTextField;
     @javafx.fxml.FXML
-    private TableColumn AvailabillityTC;
+    private TableColumn <View_SecurityStaff_List, String> AvailabilityTC;
 
     @javafx.fxml.FXML
     public void initialize() {
