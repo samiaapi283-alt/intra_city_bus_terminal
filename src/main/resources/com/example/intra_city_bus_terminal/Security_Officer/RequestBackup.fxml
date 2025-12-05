@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="450.0" type="BorderPane" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.intra_city_bus_terminal.Security_Officer.RequestBackup">
+   <top>
+      <MenuBar fx:id="MenuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <TableView fx:id="BackupTableView" prefHeight="114.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="ReasonTC" prefWidth="162.0" text="Reason" />
+          <TableColumn fx:id="LocationTC" minWidth="0.0" prefWidth="137.0" text="Location" />
+            <TableColumn fx:id="StatusTC" prefWidth="150.0" text="Status" />
+        </columns>
+      </TableView>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="320.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="179.0" layoutY="14.0" text="Request Backup " />
+            <Label layoutX="37.0" layoutY="46.0" text="Reason" />
+            <Label layoutX="37.0" layoutY="77.0" text="Location" />
+            <TextField fx:id="ReasonTextField" layoutX="120.0" layoutY="42.0" />
+            <ComboBox fx:id="LocationComboBox" layoutX="120.0" layoutY="73.0" prefHeight="26.0" prefWidth="158.0" />
+            <Button layoutX="294.0" layoutY="55.0" mnemonicParsing="false" onAction="#SendBackupRequestOnAction" prefHeight="26.0" prefWidth="142.0" text="Send backup request" />
+            <Label fx:id="OutputLabel" layoutX="37.0" layoutY="112.0" prefHeight="38.0" prefWidth="375.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</fx:root>
