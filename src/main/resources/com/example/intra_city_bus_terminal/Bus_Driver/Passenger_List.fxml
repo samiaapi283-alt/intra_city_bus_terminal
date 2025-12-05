@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.intra_city_bus_terminal.Bus_Driver.Passenger_List"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="247.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.intra_city_bus_terminal.Bus_Driver.Passenger_List">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Select Trip Section" />
+      <Label layoutX="14.0" layoutY="39.0" text="Select Trip:" />
+      <ComboBox fx:id="tripListComboBox" layoutX="81.0" layoutY="35.0" prefHeight="26.0" prefWidth="84.0" promptText="Trip list" />
+      <Label layoutX="14.0" layoutY="62.0" prefHeight="26.0" prefWidth="75.0" text="Passenger List" />
+      <TableView layoutX="12.0" layoutY="88.0" prefHeight="121.0" prefWidth="240.0">
+        <columns>
+          <TableColumn fx:id="passengerNameColumn" editable="false" prefWidth="99.20001220703125" text="Passenger Name" />
+          <TableColumn fx:id="seatNumberColumn" editable="false" prefWidth="81.5999755859375" text="Seat Number" />
+            <TableColumn fx:id="ticketIdColumn" editable="false" prefWidth="56.79998779296875" text="Ticket ID" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>

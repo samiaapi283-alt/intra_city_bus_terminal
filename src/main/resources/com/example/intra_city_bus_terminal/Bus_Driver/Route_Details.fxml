@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.intra_city_bus_terminal.Bus_Driver.Route_Details"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="463.0" prefWidth="262.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.intra_city_bus_terminal.Bus_Driver.Route_Details">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Trip Selection Section" />
+      <Label layoutX="14.0" layoutY="41.0" text="Select Trip" />
+      <ComboBox fx:id="tripListComboBox" layoutX="77.0" layoutY="37.0" prefHeight="26.0" prefWidth="160.0" promptText="Trip List" />
+      <Label layoutX="14.0" layoutY="80.0" text="Route Basic Info" />
+      <Label layoutX="14.0" layoutY="107.0" text="Route Name:" />
+      <Label layoutX="13.0" layoutY="137.0" prefHeight="18.0" prefWidth="70.0" text="Total Stops:" />
+      <TextField fx:id="routeNameTextField" editable="false" layoutX="88.0" layoutY="103.0" />
+      <TextField fx:id="totalStopsTextField" editable="false" layoutX="88.0" layoutY="134.0" />
+      <Label layoutX="14.0" layoutY="174.0" text="Route Stops List" />
+      <Label layoutX="13.0" layoutY="200.0" text="Stopping Points:" />
+      <TableView layoutX="13.0" layoutY="224.0" prefHeight="128.0" prefWidth="227.0">
+        <columns>
+          <TableColumn fx:id="stopNoColumn" editable="false" prefWidth="66.39993000030518" text="Stop No." />
+          <TableColumn fx:id="stopNameColumn" editable="false" prefWidth="78.40008544921875" text="Stop Name" />
+            <TableColumn fx:id="arrivalTimeColumn" editable="false" prefWidth="82.4000244140625" text="Arrival Time" />
+        </columns>
+      </TableView>
+      <Label fx:id="outputLabel" layoutX="9.0" layoutY="361.0" prefHeight="70.0" prefWidth="234.0" />
+   </children>
 </AnchorPane>
