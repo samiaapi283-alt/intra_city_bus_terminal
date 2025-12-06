@@ -1,24 +1,32 @@
 package com.example.intra_city_bus_terminal.Bus_Driver;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
 public class Emergency_Alert
 {
-    @javafx.fxml.FXML
+    @FXML
     private TextArea shortMessageTextArea;
-    @javafx.fxml.FXML
+    @FXML
     private Label outputLabel;
-    @javafx.fxml.FXML
-    private ComboBox alertTypeComboBox;
+    @FXML
+    private ComboBox<String> alertTypeComboBox;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        alertTypeComboBox.getItems().addAll(
+                "Medical Emergency",
+                "Fire Alert",
+                "Mechanical Issue",
+                "Suspicious Activity",
+                "Road Block / Accident"
+        );
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void sendAlertOnClick(ActionEvent actionEvent) {
     }
 }

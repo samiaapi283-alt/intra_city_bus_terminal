@@ -1,32 +1,32 @@
 package com.example.intra_city_bus_terminal.Bus_Driver;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 
 public class Trip_Schedule
 {
-    @javafx.fxml.FXML
-    private TableColumn DepartureTimeColumn;
-    @javafx.fxml.FXML
-    private TableColumn tripIDColumn;
-    @javafx.fxml.FXML
-    private TableColumn departureTimeColumn;
-    @javafx.fxml.FXML
-    private TableColumn routeColumn;
-    @javafx.fxml.FXML
-    private TableColumn tripIdColumn;
-    @javafx.fxml.FXML
-    private TableColumn busNumberColumn;
-    @javafx.fxml.FXML
-    private TableColumn dateColumn;
-    @javafx.fxml.FXML
-    private TableColumn RouteColumn;
+    @FXML
+    private TableColumn<Trip_Schedule, String> tripIdColumn;
+    @FXML
+    private TableColumn<Trip_Schedule, String> departureTimeColumn;
+    @FXML
+    private TableColumn<Trip_Schedule, String> routeColumn;
+    @FXML
+    private TableColumn<Trip_Schedule, String> busNumberColumn;
+    @FXML
+    private TableColumn<Trip_Schedule, String> dateColumn;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        tripIdColumn.setText("Trip ID");
+        departureTimeColumn.setText("Departure Time");
+        routeColumn.setText("Route");
+        busNumberColumn.setText("Bus Number");
+        dateColumn.setText("Date");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void viewFullScheduleOnClick(ActionEvent actionEvent) {
     }
 }
