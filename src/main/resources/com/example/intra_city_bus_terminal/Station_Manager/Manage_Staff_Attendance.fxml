@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.intra_city_bus_terminal.Station_Manager.Manage_Staff_Attendance">
+   <top>
+      <MenuBar fx:id="menubar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="253.0" layoutY="1.0" prefHeight="27.0" prefWidth="95.0" style="-fx-background-color: light yellow;" text="Staff Attendance " />
+            <Label layoutX="14.0" layoutY="42.0" text="Date " />
+            <DatePicker fx:id="Datepicker" layoutX="101.0" layoutY="37.0" prefHeight="26.0" prefWidth="160.0" />
+            <Button layoutX="91.0" layoutY="187.0" mnemonicParsing="false" onAction="#UpdateattendanceOA" text="Update attendance " />
+            <TableView fx:id="tableview" layoutX="1.0" layoutY="240.0" prefHeight="133.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="IDTC" prefWidth="67.0" text="ID" />
+                <TableColumn fx:id="NameTC" prefWidth="83.0" text="Name " />
+                  <TableColumn fx:id="AttendanceTC" prefWidth="86.0" text="Attendance  " />
+              </columns>
+            </TableView>
+            <Label layoutX="14.0" layoutY="109.0" text="Staff Name " />
+            <Label layoutX="14.0" layoutY="76.0" text="Staff ID " />
+            <Label layoutX="14.0" layoutY="140.0" text="Attendance " />
+            <CheckBox fx:id="AttendanceCheckBox" layoutX="100.0" layoutY="140.0" mnemonicParsing="false" text="Present" />
+            <TextField fx:id="StaffIDTextfield" layoutX="101.0" layoutY="72.0" />
+            <TextField fx:id="StaffNameTextField" layoutX="101.0" layoutY="105.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
