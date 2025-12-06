@@ -1,31 +1,35 @@
 package com.example.intra_city_bus_terminal.Ticketing_Staff;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Cancel_ticketsController
 {
-    @javafx.fxml.FXML
+    @FXML
     private TextField passengerNameTextField;
-    @javafx.fxml.FXML
+    @FXML
     private TextField travelDateTextField;
-    @javafx.fxml.FXML
+    @FXML
     private TextField ticketNumberTextField;
-    @javafx.fxml.FXML
-    private Label outputlabel;
-    @javafx.fxml.FXML
+    @FXML
+    private Label outputLabel;
+    @FXML
     private TextField seatNumberTextField;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        // Future initialization if needed
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void cancelTicketOnClick(ActionEvent actionEvent) {
+        outputLabel.setText("Ticket cancelled successfully.");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void verifyTicketOnClick(ActionEvent actionEvent) {
+        outputLabel.setText("Ticket verified successfully.");
     }
 }

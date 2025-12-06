@@ -1,6 +1,7 @@
 package com.example.intra_city_bus_terminal.Ticketing_Staff;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -8,32 +9,38 @@ import javafx.scene.control.TextField;
 
 public class Manage_ticket_bookingsController
 {
-    @javafx.fxml.FXML
+    @FXML
     private TextField phoneNumberTextField;
-    @javafx.fxml.FXML
-    private ComboBox busTypeComboBox;
-    @javafx.fxml.FXML
+    @FXML
+    private ComboBox<String> busTypeComboBox;
+    @FXML
     private Label outputLabel;
-    @javafx.fxml.FXML
+    @FXML
     private TextField passengerNameTextField;
-    @javafx.fxml.FXML
-    private ComboBox departureCityComboBox;
-    @javafx.fxml.FXML
-    private ComboBox destinationCityComboBox;
-    @javafx.fxml.FXML
+    @FXML
+    private ComboBox<String> departureCityComboBox;
+    @FXML
+    private ComboBox<String> destinationCityComboBox;
+    @FXML
     private DatePicker travelDateDp;
-    @javafx.fxml.FXML
-    private ComboBox seatNumberComboBox;
+    @FXML
+    private ComboBox<String> seatNumberComboBox;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        busTypeComboBox.getItems().addAll("AC", "Non-AC", "Sleeper", "Semi-Sleeper");
+        departureCityComboBox.getItems().addAll("Dhaka", "Chittagong", "Sylhet", "Khulna");
+        destinationCityComboBox.getItems().addAll("Dhaka", "Chittagong", "Sylhet", "Khulna");
+        seatNumberComboBox.getItems().addAll("1A", "1B", "2A", "2B", "3A", "3B");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void saveBookingsOnClick(ActionEvent actionEvent) {
+        outputLabel.setText("Booking saved successfully.");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void checkAvailabilityOnClick(ActionEvent actionEvent) {
+        outputLabel.setText("Seat availability checked.");
     }
 }

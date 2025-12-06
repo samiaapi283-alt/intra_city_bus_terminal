@@ -1,6 +1,7 @@
 package com.example.intra_city_bus_terminal.Ticketing_Staff;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextArea;
@@ -8,26 +9,29 @@ import javafx.scene.control.TextField;
 
 public class Passenger_inquiriesController
 {
-    @javafx.fxml.FXML
+    @FXML
     private Label outputLabel;
-    @javafx.fxml.FXML
+    @FXML
     private TextArea replyTextArea;
-    @javafx.fxml.FXML
+    @FXML
     private TextField passengerNameTextField;
-    @javafx.fxml.FXML
+    @FXML
     private TextArea messageTextArea;
-    @javafx.fxml.FXML
-    private TableColumn passengerNameColumn;
-    @javafx.fxml.FXML
-    private TableColumn inquiryIdColumn;
-    @javafx.fxml.FXML
-    private TableColumn messagePreviewColumn;
+    @FXML
+    private TableColumn<Passenger_inquiriesController, String> passengerNameColumn;
+    @FXML
+    private TableColumn<Passenger_inquiriesController, String> inquiryIdColumn;
+    @FXML
+    private TableColumn<Passenger_inquiriesController, String> messagePreviewColumn;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        // TableColumn properties can be set in Scene Builder or here if needed
+        // Example: passengerNameColumn.setCellValueFactory(new PropertyValueFactory<>("passengerName"));
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void sentReplyOnClick(ActionEvent actionEvent) {
+        outputLabel.setText("Reply sent successfully.");
     }
 }

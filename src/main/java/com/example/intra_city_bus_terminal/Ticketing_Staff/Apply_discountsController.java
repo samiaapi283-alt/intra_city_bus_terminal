@@ -1,28 +1,37 @@
 package com.example.intra_city_bus_terminal.Ticketing_Staff;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Apply_discountsController
 {
-    @javafx.fxml.FXML
+    @FXML
     private TextField busNumberTextField;
-    @javafx.fxml.FXML
+    @FXML
     private Label outputLabel;
-    @javafx.fxml.FXML
+    @FXML
     private TextField passengerNameTextField;
-    @javafx.fxml.FXML
+    @FXML
     private TextField ticketNumberTextField;
-    @javafx.fxml.FXML
-    private ComboBox availaibleDiscountComboBox;
+    @FXML
+    private ComboBox<String> availaibleDiscountComboBox;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        availaibleDiscountComboBox.getItems().addAll(
+                "Student Discount",
+                "Senior Citizen",
+                "Festival Offer",
+                "Early Bird"
+        );
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void applyDiscountOnClick(ActionEvent actionEvent) {
+        String discount = availaibleDiscountComboBox.getValue();
+        outputLabel.setText("Applied: " + discount);
     }
 }

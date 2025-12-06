@@ -1,6 +1,7 @@
 package com.example.intra_city_bus_terminal.Ticketing_Staff;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
@@ -8,38 +9,46 @@ import javafx.scene.control.TextField;
 
 public class Issue_new_ticketController
 {
-    @javafx.fxml.FXML
+    @FXML
     private TextField phoneNumberTextField;
-    @javafx.fxml.FXML
-    private ComboBox busTypeComboBox;
-    @javafx.fxml.FXML
-    private ComboBox fromComboBox;
-    @javafx.fxml.FXML
+    @FXML
+    private ComboBox<String> busTypeComboBox;
+    @FXML
+    private ComboBox<String> fromComboBox;
+    @FXML
     private TextField passengerNameTextField;
-    @javafx.fxml.FXML
-    private ComboBox toComboBox;
-    @javafx.fxml.FXML
+    @FXML
+    private ComboBox<String> toComboBox;
+    @FXML
     private TextField fareAmountTextField;
-    @javafx.fxml.FXML
-    private ComboBox seatNoComboBox;
-    @javafx.fxml.FXML
+    @FXML
+    private ComboBox<String> seatNoComboBox;
+    @FXML
     private TextArea ticketDetailsTextArea;
-    @javafx.fxml.FXML
+    @FXML
     private DatePicker dateDP;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        busTypeComboBox.getItems().addAll("AC", "Non-AC", "Sleeper", "Semi-Sleeper");
+        fromComboBox.getItems().addAll("Dhaka", "Chittagong", "Sylhet", "Khulna");
+        toComboBox.getItems().addAll("Dhaka", "Chittagong", "Sylhet", "Khulna");
+        seatNoComboBox.getItems().addAll("1A", "1B", "2A", "2B", "3A", "3B");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void verifyFareOnClick(ActionEvent actionEvent) {
+        // temporary output example
+        ticketDetailsTextArea.setText("Fare verified successfully.");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void generateTicketOnClick(ActionEvent actionEvent) {
+        ticketDetailsTextArea.setText("Ticket generated successfully.");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void printTicketOnClick(ActionEvent actionEvent) {
+        ticketDetailsTextArea.setText("Ticket printed successfully.");
     }
 }
