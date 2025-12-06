@@ -26,6 +26,7 @@ public class Manage_Staff_Attendance
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML

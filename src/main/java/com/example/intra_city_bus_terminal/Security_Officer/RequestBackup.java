@@ -24,6 +24,17 @@ public class RequestBackup
 
     @javafx.fxml.FXML
     public void initialize() {
+        LocationComboBox.getItems().addAll("Terminal 1", "Terminal 2", "Terminal 3", "Terminal 4", "Terminal 5");
+
+        LocationComboBox.setId("LocationComboBox");
+        ReasonTextField.setId("ReasonTextField");
+        OutputLabel.setId("OutputLabel");
+        StatusTC.setId("StatusTC");
+        ReasonTC.setId("ReasonTC");
+        BackupTableView.setId("BackupTableView");
+        LocationComboBox.setValue("Location");
+
+
     }
 
     @javafx.fxml.FXML

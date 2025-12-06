@@ -24,10 +24,13 @@ public class View_SecurityStaff_List
 
     @javafx.fxml.FXML
     public void initialize() {
+
+
     }
 
     @javafx.fxml.FXML
     public void SearchOnAction(ActionEvent actionEvent) {
+        Button button = (Button) actionEvent.getSource();
     }
 
     public View_SecurityStaff_List(TableColumn<View_SecurityStaff_List, String> staffIDTC, MenuBar menuBar, TableView<View_SecurityStaff_List> tableview, TableColumn<View_SecurityStaff_List, DatePicker> dateTC, TextField satffIDTextField, DatePicker datePicker, TextField staffNameTextField, TableColumn<View_SecurityStaff_List, String> availabilityTC) {

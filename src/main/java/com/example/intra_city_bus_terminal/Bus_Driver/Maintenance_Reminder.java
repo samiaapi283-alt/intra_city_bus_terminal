@@ -1,28 +1,32 @@
 package com.example.intra_city_bus_terminal.Bus_Driver;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 
 public class Maintenance_Reminder
 {
-    @javafx.fxml.FXML
-    private TableColumn serviceDateColumn;
-    @javafx.fxml.FXML
+    @FXML
+    private TableColumn<Maintenance_Reminder, String> serviceDateColumn;
+    @FXML
     private Label outputLabel;
-    @javafx.fxml.FXML
-    private TableColumn statusColumn;
-    @javafx.fxml.FXML
-    private TableColumn serviceNameColumn;
-    @javafx.fxml.FXML
+    @FXML
+    private TableColumn<Maintenance_Reminder, String> statusColumn;
+    @FXML
+    private TableColumn<Maintenance_Reminder, String> serviceNameColumn;
+    @FXML
     private TextField busNoTextField;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        serviceDateColumn.setText("Service Date");
+        statusColumn.setText("Status");
+        serviceNameColumn.setText("Service Name");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void maintenanceReminderOnClick(ActionEvent actionEvent) {
     }
 }

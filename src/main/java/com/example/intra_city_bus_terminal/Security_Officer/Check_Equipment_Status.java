@@ -127,6 +127,7 @@ public class Check_Equipment_Status
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML

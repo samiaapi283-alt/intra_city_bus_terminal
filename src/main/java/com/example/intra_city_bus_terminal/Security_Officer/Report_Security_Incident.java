@@ -34,7 +34,11 @@ public class Report_Security_Incident
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
+        IncidentTypeComboBox.getItems().addAll("Unauthorized access", "Vandalism", "Pickpocketing", "Disorderly Passenger" );
+        SeverityComboBox.getItems().addAll("Normal", "Low", "Medium", "High");
+        SeverityComboBox.getSelectionModel().selectFirst();
+        IncidentTypeComboBox.getSelectionModel().selectFirst();
+        }
 
     @javafx.fxml.FXML
     public void LogIncidentOnAction(ActionEvent actionEvent) {
