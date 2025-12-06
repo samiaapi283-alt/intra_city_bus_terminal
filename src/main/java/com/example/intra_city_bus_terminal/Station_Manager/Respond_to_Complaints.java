@@ -82,4 +82,73 @@ public class Respond_to_Complaints
     @javafx.fxml.FXML
     public void Complaint13OA(ActionEvent actionEvent) {
     }
+
+    public Respond_to_Complaints(Label confirmationLabel, TextField replyTextField, ComboBox<String> complaintCB, MenuBar menuBar, DatePicker datePicker, VBox vbox) {
+        ConfirmationLabel = confirmationLabel;
+        ReplyTextField = replyTextField;
+        ComplaintCB = complaintCB;
+        MenuBar = menuBar;
+        DatePicker = datePicker;
+        Vbox = vbox;
+    }
+
+    public Label getConfirmationLabel() {
+        return ConfirmationLabel;
+    }
+
+    public void setConfirmationLabel(Label confirmationLabel) {
+        ConfirmationLabel = confirmationLabel;
+    }
+
+    public ComboBox<String> getComplaintCB() {
+        return ComplaintCB;
+    }
+
+    public void setComplaintCB(ComboBox<String> complaintCB) {
+        ComplaintCB = complaintCB;
+    }
+
+    public TextField getReplyTextField() {
+        return ReplyTextField;
+    }
+
+    public void setReplyTextField(TextField replyTextField) {
+        ReplyTextField = replyTextField;
+    }
+
+    public MenuBar getMenuBar() {
+        return MenuBar;
+    }
+
+    public void setMenuBar(MenuBar menuBar) {
+        MenuBar = menuBar;
+    }
+
+    public DatePicker getDatePicker() {
+        return DatePicker;
+    }
+
+    public void setDatePicker(DatePicker datePicker) {
+        DatePicker = datePicker;
+    }
+
+    public VBox getVbox() {
+        return Vbox;
+    }
+
+    public void setVbox(VBox vbox) {
+        Vbox = vbox;
+    }
+
+    @Override
+    public String toString() {
+        return "Respond_to_Complaints{" +
+                "ConfirmationLabel=" + ConfirmationLabel +
+                ", ComplaintCB=" + ComplaintCB +
+                ", ReplyTextField=" + ReplyTextField +
+                ", MenuBar=" + MenuBar +
+                ", DatePicker=" + DatePicker +
+                ", Vbox=" + Vbox +
+                '}';
+    }
 }

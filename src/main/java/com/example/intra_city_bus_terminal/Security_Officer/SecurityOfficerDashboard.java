@@ -60,4 +60,63 @@ public class SecurityOfficerDashboard
     @javafx.fxml.FXML
     public void CheckTicketOnAction(ActionEvent actionEvent) {
     }
+
+    public SecurityOfficerDashboard(Label dashboardLabel, MenuBar menuBar, VBox vboxSM, Button requestBackupButton, ImageView securityImage) {
+        DashboardLabel = dashboardLabel;
+        MenuBar = menuBar;
+        VboxSM = vboxSM;
+        RequestBackupButton = requestBackupButton;
+        SecurityImage = securityImage;
+    }
+
+    public Label getDashboardLabel() {
+        return DashboardLabel;
+    }
+
+    public void setDashboardLabel(Label dashboardLabel) {
+        DashboardLabel = dashboardLabel;
+    }
+
+    public VBox getVboxSM() {
+        return VboxSM;
+    }
+
+    public void setVboxSM(VBox vboxSM) {
+        VboxSM = vboxSM;
+    }
+
+    public MenuBar getMenuBar() {
+        return MenuBar;
+    }
+
+    public void setMenuBar(MenuBar menuBar) {
+        MenuBar = menuBar;
+    }
+
+    public ImageView getSecurityImage() {
+        return SecurityImage;
+    }
+
+    public void setSecurityImage(ImageView securityImage) {
+        SecurityImage = securityImage;
+    }
+
+    public Button getRequestBackupButton() {
+        return RequestBackupButton;
+    }
+
+    public void setRequestBackupButton(Button requestBackupButton) {
+        RequestBackupButton = requestBackupButton;
+    }
+
+    @Override
+    public String toString() {
+        return "SecurityOfficerDashboard{" +
+                "DashboardLabel=" + DashboardLabel +
+                ", MenuBar=" + MenuBar +
+                ", VboxSM=" + VboxSM +
+                ", SecurityImage=" + SecurityImage +
+                ", RequestBackupButton=" + RequestBackupButton +
+                '}';
+    }
 }
