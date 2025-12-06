@@ -29,6 +29,7 @@ public class Manage_Platform_Allocations
         PlatformNumberCB.getItems().addAll("Platform 1", "Platform 2", "Platform 3", "Platform 4", "Platform 5");
         PlatformNumberTC.setText("Platform 1");
 
+
     }
 
     @javafx.fxml.FXML
