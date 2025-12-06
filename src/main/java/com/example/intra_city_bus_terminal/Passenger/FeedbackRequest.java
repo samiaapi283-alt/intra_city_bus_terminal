@@ -16,6 +16,9 @@ public class FeedbackRequest
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        ComplaintTypeCB.getItems().addAll("Unclean", "Uncomfortable sit" , "Rude Staff");
+
     }
 
     @javafx.fxml.FXML

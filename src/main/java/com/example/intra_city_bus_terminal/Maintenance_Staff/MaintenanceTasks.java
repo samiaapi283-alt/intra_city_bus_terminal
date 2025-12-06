@@ -5,6 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class MaintenanceTasks
 {
@@ -29,6 +30,13 @@ public class MaintenanceTasks
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        StatusCB.getItems().addAll("Finish","Start later","importent");
+
+        TaskNameTC.setCellValueFactory(new PropertyValueFactory<>("CardNo"));
+        StatusTC.setCellValueFactory(new PropertyValueFactory<>("HolderName"));
+        AreaTC.setCellValueFactory(new PropertyValueFactory<>("GateWayName"));
+
     }
 
     @javafx.fxml.FXML

@@ -19,6 +19,12 @@ public class SeatAvailability
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        SelectedBusCB.getItems().addAll("Shamoli", "Hanif" , "Ena");
+        FromCB.getItems().addAll("Kushtia","Khulna","Rajsahi","Rangpur", "Dhaka");
+        ToCB.getItems().addAll("Kushtia","Khulna","Rajsahi","Rangpur", "Dhaka");
+        TypeCB.getItems().addAll("AC", "Non-AC");
+
     }
 
     @javafx.fxml.FXML

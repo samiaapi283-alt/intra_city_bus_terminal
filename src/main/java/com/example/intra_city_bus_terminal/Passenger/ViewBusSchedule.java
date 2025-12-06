@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 
@@ -28,6 +29,15 @@ public class ViewBusSchedule
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        routeCB.getItems().addAll("Kushtia","Khulna","Rajsahi","Rangpur", "Dhaka");
+        FromCB.getItems().addAll("Kushtia","Khulna","Rajsahi","Rangpur", "Dhaka");
+
+        FromTC.setCellValueFactory(new PropertyValueFactory<>("CardNo"));
+        dateTC.setCellValueFactory(new PropertyValueFactory<>("HolderName"));
+        ToTC.setCellValueFactory(new PropertyValueFactory<>("GateWayName"));
+        routeTC.setCellValueFactory(new PropertyValueFactory<>("GateWayName"));
+
     }
 
     @javafx.fxml.FXML

@@ -21,6 +21,8 @@ public class RateTrips
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        RatingCB.getItems().addAll("5", "4" , "3","2","1");
     }
 
     @javafx.fxml.FXML

@@ -5,6 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 
@@ -14,10 +15,6 @@ public class RefundTicket
     private TextField TicketIDTF;
     @javafx.fxml.FXML
     private TextField RouteTF;
-    @javafx.fxml.FXML
-    private TableColumn <RefundTicket,String> StatusTC;
-    @javafx.fxml.FXML
-    private ComboBox<String> StatusCB;
     @javafx.fxml.FXML
     private TableColumn<RefundTicket,String> SeatnoTC;
     @javafx.fxml.FXML
@@ -33,6 +30,13 @@ public class RefundTicket
 
     @javafx.fxml.FXML
     public void initialize() {
+
+
+        SeatnoTC.setCellValueFactory(new PropertyValueFactory<>("CardNo"));
+        RouteTC.setCellValueFactory(new PropertyValueFactory<>("HolderName"));
+        DateTC.setCellValueFactory(new PropertyValueFactory<>("GateWayName"));
+
+
     }
 
     @javafx.fxml.FXML

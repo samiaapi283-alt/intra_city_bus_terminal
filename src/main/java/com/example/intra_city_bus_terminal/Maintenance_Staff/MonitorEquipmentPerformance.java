@@ -1,8 +1,10 @@
 package com.example.intra_city_bus_terminal.Maintenance_Staff;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class MonitorEquipmentPerformance
 {
@@ -23,4 +25,11 @@ public class MonitorEquipmentPerformance
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+
+
+        EquipmentQuentityTC.setCellValueFactory(new PropertyValueFactory<>("CardNo"));
+        DepartmentTC.setCellValueFactory(new PropertyValueFactory<>("HolderName"));
+        EquipmentNameTC.setCellValueFactory(new PropertyValueFactory<>("HolderName"));
+    }
+
+}

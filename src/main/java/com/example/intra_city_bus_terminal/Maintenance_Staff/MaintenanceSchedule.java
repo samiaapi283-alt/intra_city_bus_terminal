@@ -5,6 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class MaintenanceSchedule
 {
@@ -27,6 +28,15 @@ public class MaintenanceSchedule
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        StatusCB.getItems().addAll("Finish","Start later","importent");
+        AreaCB.getItems().addAll("Platform 1","Platform 2","Platform 3");
+
+        TaskNameTC.setCellValueFactory(new PropertyValueFactory<>("CardNo"));
+        StatusTC.setCellValueFactory(new PropertyValueFactory<>("HolderName"));
+        DateTC.setCellValueFactory(new PropertyValueFactory<>("GateWayName"));
+        AreaTC.setCellValueFactory(new PropertyValueFactory<>("GateWayName"));
+
     }
 
     @javafx.fxml.FXML

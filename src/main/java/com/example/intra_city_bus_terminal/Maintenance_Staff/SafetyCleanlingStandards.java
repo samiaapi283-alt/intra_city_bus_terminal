@@ -5,6 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class SafetyCleanlingStandards
 {
@@ -27,6 +28,17 @@ public class SafetyCleanlingStandards
 
     @javafx.fxml.FXML
     public void initialize() {
+
+
+        StatusCB.getItems().addAll("Finish","Start later","importent");
+
+        TaskNameTC.setCellValueFactory(new PropertyValueFactory<>("CardNo"));
+        StatusTC.setCellValueFactory(new PropertyValueFactory<>("HolderName"));
+        AreaTC.setCellValueFactory(new PropertyValueFactory<>("GateWayName"));
+        TaskIDTC.setCellValueFactory(new PropertyValueFactory<>("GateWayName"));
+
+
+
     }
 
     @javafx.fxml.FXML

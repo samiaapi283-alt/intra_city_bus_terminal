@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class BookATicket
 {
@@ -28,6 +29,12 @@ public class BookATicket
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        SelectedBusCB.getItems().addAll("Shamoli", "Hanif" , "Ena");
+        FromCB.getItems().addAll("Kushtia","Khulna","Rajsahi","Rangpur", "Dhaka");
+        ToCB.getItems().addAll("Kushtia","Khulna","Rajsahi","Rangpur", "Dhaka");
+        PaymentmethodCB.getItems().addAll("bKash", "Roket" , "Nagad", "Bank");
+
     }
 
     @javafx.fxml.FXML

@@ -18,6 +18,9 @@ public class TaskProgress
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        StatusCB.getItems().addAll("Finish","Start later","importent");
+        SelectTaskCB.getItems().addAll("Cleaning","Chack ticket ","Inspection");
     }
 
     @javafx.fxml.FXML
