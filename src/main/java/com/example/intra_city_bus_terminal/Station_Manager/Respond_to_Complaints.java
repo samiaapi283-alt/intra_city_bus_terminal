@@ -1,11 +1,15 @@
 package com.example.intra_city_bus_terminal.Station_Manager;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
+
 public class Respond_to_Complaints
 {
     @javafx.fxml.FXML
     private Label ConfirmationLabel;
     @javafx.fxml.FXML
-    private ComboBox ComplaintCB;
+    private ComboBox <String> ComplaintCB;
     @javafx.fxml.FXML
     private TextField ReplyTextField;
     @javafx.fxml.FXML

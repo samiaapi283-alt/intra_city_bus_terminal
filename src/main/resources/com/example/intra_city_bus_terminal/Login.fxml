@@ -21,7 +21,7 @@
       <TextField fx:id="UsernameTextfield" layoutX="212.0" layoutY="84.0" />
       <ComboBox fx:id="UserTypeComboBox" layoutX="214.0" layoutY="125.0" onAction="#UsertypeComboBoxOnAction" prefHeight="26.0" prefWidth="153.0" />
       <PasswordField fx:id="PasswordField" layoutX="212.0" layoutY="173.0" />
-      <Button layoutX="260.0" layoutY="231.0" mnemonicParsing="false" onAction="#LoginOnAction" text="Log in " />
+      <Button layoutX="260.0" layoutY="231.0" mnemonicParsing="false" onAction="#CreateAnAccountOnAction" text="Log in " />
       <Button layoutX="446.0" layoutY="340.0" mnemonicParsing="false" onAction="#CreateAnAccountOnAction" prefHeight="26.0" prefWidth="124.0" text="Create an Account" />
    </children>
 </AnchorPane>

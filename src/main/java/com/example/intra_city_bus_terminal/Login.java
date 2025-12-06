@@ -25,6 +25,7 @@ public class Login
     }
 
 
+
     @javafx.fxml.FXML
     public void LoginOnAction(ActionEvent actionEvent) {
         String username = UsernameTextfield.getText();
@@ -44,8 +45,7 @@ public class Login
 
     private void showAlert(Alert.AlertType type, String message) {
         Alert alert = new Alert(type);
-        alert.setTitle("Error");
-        alert.setHeaderText(null);
+        alert.setContentText(message);
         alert.setContentText(message);
         alert.showAndWait();
 
