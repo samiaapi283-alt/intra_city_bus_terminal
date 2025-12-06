@@ -23,3 +23,4 @@ class Check_Ticket extends Application {
         launch(args);
     }
 }
+
