@@ -58,4 +58,53 @@ public class StationManagerDashboard
     @javafx.fxml.FXML
     public void StaffAttendanceOnAction(ActionEvent actionEvent) {
     }
+
+    public StationManagerDashboard(Label dashboardLabel, MenuBar menuBar, ImageView image1, VBox vbox) {
+        DashboardLabel = dashboardLabel;
+        MenuBar = menuBar;
+        Image1 = image1;
+        Vbox = vbox;
+    }
+
+    public Label getDashboardLabel() {
+        return DashboardLabel;
+    }
+
+    public void setDashboardLabel(Label dashboardLabel) {
+        DashboardLabel = dashboardLabel;
+    }
+
+    public MenuBar getMenuBar() {
+        return MenuBar;
+    }
+
+    public void setMenuBar(MenuBar menuBar) {
+        MenuBar = menuBar;
+    }
+
+    public ImageView getImage1() {
+        return Image1;
+    }
+
+    public void setImage1(ImageView image1) {
+        Image1 = image1;
+    }
+
+    public VBox getVbox() {
+        return Vbox;
+    }
+
+    public void setVbox(VBox vbox) {
+        Vbox = vbox;
+    }
+
+    @Override
+    public String toString() {
+        return "StationManagerDashboard{" +
+                "DashboardLabel=" + DashboardLabel +
+                ", MenuBar=" + MenuBar +
+                ", Image1=" + Image1 +
+                ", Vbox=" + Vbox +
+                '}';
+    }
 }
