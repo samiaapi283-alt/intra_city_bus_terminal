@@ -24,6 +24,7 @@ public class Restricted_Area
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML

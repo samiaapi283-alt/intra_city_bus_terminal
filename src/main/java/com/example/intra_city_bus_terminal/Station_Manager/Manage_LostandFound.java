@@ -36,6 +36,8 @@ public class Manage_LostandFound
 
     @javafx.fxml.FXML
     public void initialize() {
+        StatusCB.getItems().addAll("Pending", "Found Owner");
+
     }
 
     @javafx.fxml.FXML

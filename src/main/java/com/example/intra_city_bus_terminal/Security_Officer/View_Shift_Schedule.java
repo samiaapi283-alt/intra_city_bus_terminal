@@ -1,10 +1,7 @@
 package com.example.intra_city_bus_terminal.Security_Officer;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 
 public class View_Shift_Schedule
 {
@@ -23,10 +20,15 @@ public class View_Shift_Schedule
 
     @javafx.fxml.FXML
     public void initialize() {
+
+
+
     }
 
     @javafx.fxml.FXML
     public void SearchOnAction(ActionEvent actionEvent) {
+        Button button = (Button) actionEvent.getSource();
+
     }
 
     public View_Shift_Schedule(TableColumn<View_Shift_Schedule, String> officerIDTC, TableColumn<View_Shift_Schedule, String> dutyLocationTC, TableColumn<View_Shift_Schedule, String> dutyTimeTC, MenuBar menuBar, DatePicker datePicker, TableView<View_Shift_Schedule> tableView) {

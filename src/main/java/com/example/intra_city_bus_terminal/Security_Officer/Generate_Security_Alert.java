@@ -1,6 +1,7 @@
 package com.example.intra_city_bus_terminal.Security_Officer;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -18,6 +19,11 @@ public class Generate_Security_Alert
 
     @javafx.fxml.FXML
     public void initialize() {
+        OutputLabel = new Label();
+        NoteTextField = new TextField();
+        AlertTypeComboBox = new ComboBox<>();
+
+        AlertTypeComboBox.getItems().addAll("Fire Alert", "Medical Alert", "Bomb threat", "Misiing child alert", "Evacuation Alert");
     }
 
     @javafx.fxml.FXML

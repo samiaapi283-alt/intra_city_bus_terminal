@@ -30,6 +30,8 @@ public class Manage_BusCleaning_Schedule
 
     @javafx.fxml.FXML
     public void initialize() {
+        BusNumberComboBOX.getItems().addAll("1", "2", "3", "4", "5", "6",  "7", "8", "9");
+        BusNumberComboBOX.getSelectionModel().selectFirst();
     }
 
     @javafx.fxml.FXML

@@ -21,6 +21,15 @@ public class Respond_to_Complaints
 
     @javafx.fxml.FXML
     public void initialize() {
+        ComplaintCB.getItems().addAll("Complaint1", "Complaint2",
+                "Complaint3", "Complaint4", "Complaint5", "Complaint6",
+                "Complaint7", "Complaint8", "Complaint9", "Complaint10", "Complaint11",
+                "Complaint12", "Complaint13", "Complaint14");
+        ComplaintCB.setId("ComplaintCB");
+        ReplyTextField.setId("ReplyTextField");
+        DatePicker.setId("DatePicker");
+        Vbox.setId("Vbox");
+        MenuBar.setId("MenuBar");
     }
 
     @javafx.fxml.FXML
