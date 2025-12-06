@@ -2,6 +2,7 @@ package com.example.intra_city_bus_terminal.Security_Officer;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 
@@ -38,6 +39,24 @@ public class Report_Security_Incident
         SeverityComboBox.getItems().addAll("Normal", "Low", "Medium", "High");
         SeverityComboBox.getSelectionModel().selectFirst();
         IncidentTypeComboBox.getSelectionModel().selectFirst();
+
+        IncidentTypeTC.setCellValueFactory(new PropertyValueFactory<>("IncidentTypeComboBox"));
+        IncidentTypeTC.setEditable(true);
+        SeverityTC.setCellValueFactory(new PropertyValueFactory<>("SeverityTC"));
+        SeverityTC.setEditable(true);
+        DatePicker.setValue(LocalDate.now());
+        DatePicker.setEditable(true);
+        LocationTextField.setText("Location");
+        LocationTextField.setEditable(true);
+        DescriptionTextField.setText("Description");
+        DescriptionTextField.setEditable(true);
+        DateTC.setCellValueFactory(new PropertyValueFactory<>("DateTC"));
+        DateTC.setEditable(true);
+        OfficerIDTextField.setText("OfficerID");
+        OfficerIDTextField.setEditable(true);
+
+
+
         }
 
     @javafx.fxml.FXML
